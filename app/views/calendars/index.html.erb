@@ -4,7 +4,7 @@
     <%= f.date_field :date, class: 'date-select' %>
     <%= f.label :予定を入力, class: 'lavel' %>
     <%= f.text_field :plan, class: 'text-input' %>
-    <%= f.submit '保存' %>
+    <%= f.submit '保存' , class: 'submit' %>
   <% end %>
 </div>
 <div>
@@ -15,11 +15,11 @@
           <% day[:month] %>/<% day[:date] %>
         </div>
         <ul class='content'>
-        <% if day[:plans].length != 0 %>
+         <% if day[:plans].length != 0 %>
           <% day[:plans].each do |plan| %>
             <li class='plan-list'>・<%= plan %></li>
           <% end %>
-        <% end %>
+         <% end %>
         </ul>
       </div>
     <% end %>
